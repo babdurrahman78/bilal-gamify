@@ -13,22 +13,31 @@
     <link href="sb-admin-2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   
     <!-- Custom styles for this template-->
-    <link href="sb-admin-2/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="sb-admin-2/css/sb-admin-2.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;1,900&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav  sidebar sidebar-dark" >
+        <ul class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
           <!-- Sidebar - Brand -->
-          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-text mx-3" ><img src="assets/logo.png" alt=""></div>
-          </a>
+          <div class="sidebar-head d-flex align-items-center justify-content-center mt-2 mb-4">
+            <a class="sidebar-brand" href="index.html">
+              <div class="sidebar-brand-text ml-3"><img src="assets/logo.png" alt="logo"></div>
+              <div class="sidebar-brand-text-small mt-3 mb-4 disappear"><img src="assets/logo-small.png" alt="logo"></div>
+            </a>
 
+
+            <!-- Sidebar Toggler -->
+            <div id="sidebarToggle" class="sidebarToggleTop"><img src="assets/arrow-left.png" alt="arrow-left"></div>
+            <!-- end of sidebar Toggler -->
+          </div>
+
+          
           <div class="avatar">
-            <div class="avatar-picture">
+            <div class="avatar-picture mb-4 mx-auto">
               <img src="assets/avatar.png" alt="">
             </div>
             <div class="avatar-data">
@@ -36,46 +45,70 @@
               <p class="email">ilhamfrima@gmail.com</p>
             </div>  
           </div>
-    
+          
           <!-- Nav Item - Dashboard -->
+          <div id="sidebarToggle" class="sidebarToggleBottom mx-auto my-2 p-2 disappear"><img src="assets/right.png" alt="arrow-left"></div>
+
           <li class="nav-item">
-            <a class="nav-link text-left" href="index.html">
+            <a class="nav-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" href="index.html">
               <i class="fas fa-fw fa-columns"></i>
-              <span>Dashboard</span></a>
+              <span>Dashboard</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item border-dark border-bottom" href="buttons.html"><i class="fas fa-signal mr-3"></i>Grafik</a>
+                <a class="collapse-item" href="cards.html"><i class="fas fa-medal mr-3"></i>Ranking</a>
+              </div>
+            </div>
           </li>
 
-          <li class="nav-item active ">
-            <a class="nav-link text-left" href="index.html">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">
               <i class="fas fa-fw fa-user"></i>
-              <span>Profil</span></a>
+              <span>Profil</span>
+            </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link text-left" href="index.html">
-              <i class="fas fa-fw fa-calendar-check"></i>
-              <span>Event</span></a>
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseUtilities"
+                aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-calendar-check"></i>
+                <span>Event</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="utilities-color.html"><i class="far fa-clipboard mr-3"></i>Colors</a>
+                    <a class="collapse-item" href="utilities-border.html"><i class="far fa-check-square mr-3"></i>Pembahasan</a>
+                </div>
+            </div>
           </li>
+          
           <li class="nav-item ">
-            <a class="nav-link text-left" href="index.html">
+            <a class="nav-link" href="index.html">
               <i class="fas fa-fw fa-file-alt"></i>
               <span>Riwayat TO</span></a>
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link text-left" href="index.html">
+            <a class="nav-link" href="index.html">
               <i class="fas fa-fw fa-mug-hot"></i>
               <span>Cerita Kami</span></a>
           </li>
     
           <li class="nav-item ">
-            <a class="nav-link text-left" href="index.html">
+            <a class="nav-link" href="index.html">
               <i class="fas fa-fw fa-sign-out-alt"></i>
               <span>Log out</span></a>
           </li>
-          
+          <!-- Sidebar Toggler (Sidebar) -->
+          <!-- <div class="text-center d-none d-md-inline">
+            <button class="rounded border-0" id="sidebarToggle"></button>
+          </div> -->
         </ul>
         <!-- End of Sidebar -->
 
-        <!-- Main Content -->
+        <!-- Content -->
         <div class="content d-flex flex-column">
           <ul class="nav justify-content-end mb-3 pr-5">
             <li class="nav-item my-2 mx-2">
@@ -86,8 +119,8 @@
                 <i class="far fa-bell fa-fw"></i>
               </a>
             </li>
-            <li class="nav-item my-2 mx-2 ">
-              <a class="nav-link btn pt-3 pb-3" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="pilih-to  my-2 mx-2 ">
+              <a class="nav-link btn pt-3 pb-3" href="#">
                 PILIH TRY OUT
               </a>
             </li>
@@ -130,7 +163,25 @@
               </ul>
             </div>
           </div>
+          <!-- End of Main Content -->
         </div>
+        <!-- End of Content -->
       </div>
+      <!-- Bootstrap core JavaScript-->
+    <script src="sb-admin-2/vendor/jquery/jquery.min.js"></script>
+    <script src="sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="sb-admin-2/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="sb-admin-2/js/sb-admin-2.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="sb-admin-2/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="sb-admin-2/js/demo/chart-area-demo.js"></script>
+    <script src="sb-admin-2/js/demo/chart-pie-demo.js"></script>
   </body>
 </html>

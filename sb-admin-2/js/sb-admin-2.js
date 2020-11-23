@@ -5,23 +5,42 @@
   $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
     $("body").toggleClass("sidebar-toggled");
     $(".sidebar").toggleClass("toggled");
+    $(".sidebar .avatar-data").toggleClass("disappear")
+    $(".main-content").removeClass("ml-sm-5")
+    $(".main-content").toggleClass("move-right")
+    $(".sidebar-brand-text").toggleClass("disappear")
+    $(".sidebar-brand-text-small").removeClass("disappear")
+    $(".avatar-picture").removeClass("mb-4")
+    $(".avatar-picture").toggleClass("mb-0")
+    $(".sidebarToggleTop").toggleClass("disappear")
+    $(".sidebarToggleBottom").removeClass("disappear")
+    if (!$(".sidebar").hasClass("toggled")){
+      $(".main-content").toggleClass("ml-sm-5")
+      $(".main-content").removeClass("move-right")
+      $(".sidebar-brand-text-small").toggleClass("disappear")
+      $(".avatar-picture").toggleClass("mb-4")
+      $(".sidebarToggleBottom").addClass("disappear")
+     }
+
+    $(".sidebar span").toggleClass("disappear")
     if ($(".sidebar").hasClass("toggled")) {
       $('.sidebar .collapse').collapse('hide');
     };
   });
+  
 
   // Close any open menu accordions when window is resized below 768px
   $(window).resize(function() {
+    if($(window).width() >= 768 ){
+      $('.sidebar .avatar-data').show();
+    }
     if ($(window).width() < 768) {
       $('.sidebar .collapse').collapse('hide');
+      $('.sidebar .avatar-data').hide();
     };
     
     // Toggle the side navigation when window is resized below 480px
-    if ($(window).width() < 480 && !$(".sidebar").hasClass("toggled")) {
-      $("body").addClass("sidebar-toggled");
-      $(".sidebar").addClass("toggled");
-      $('.sidebar .collapse').collapse('hide');
-    };
+
   });
 
   // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
