@@ -43,7 +43,6 @@ li{
     font-size: 16px;
     margin : 3px 0px;
 }
-
 .sidebar .nav-item .nav-link{
     display: block;
     padding-left: 40px;
@@ -53,11 +52,9 @@ li{
     margin : 3px 0px;
     padding-left: 0px;
 }
-
 .sidebar .nav-item span{
-    
+   
 }
-
 .sidebar .nav-item .nav-link, .sidebar .nav-item .nav-link i{
     color: rgba(32, 32, 32, 0.5); 
 }
@@ -69,18 +66,15 @@ li{
 .nav .nav-item{
     padding: 0px !important;
 }
-
 .content .nav .nav-item .date{
     color: #4F4F4F;
     font-size: 16px;
     font-weight: 400;
 }
-
 .content .nav .nav-item .nav-link i{
     font-size: 24px;
     color: black;
 }
-
 .content .nav .pilih-to .btn{
     width: 100%;
     background-color: #2F80ED;
@@ -88,14 +82,12 @@ li{
     font-size: 14px;
     font-weight: 500 ;
 }
-
 .content .nav  .btn:hover{
     color: #2F80ED;
     font-size: 14px;
     font-weight: 500 ;
     background-color:#FFFFFF ;
 }
-
 .main-content{
     border-radius: 25px;
     font-weight: 500;

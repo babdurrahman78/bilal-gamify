@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="node_modules/chart.js/dist/Chart.js"></script>
+    </head>
+    <body>
+        <div class="chart" style="width: 200px;">
+            <canvas id="myChart"d></canvas>
+        </div>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+                // The data for our dataset
+                data: {
+                    labels: ['','TO1', 'TO2', 'TO3', 'TO4'],
+                    datasets: [{
+                        label: 'My First dataset',
+                        fill : false,
+                        borderColor: '#FE6534',
+                        data: [null, 60, 70, 80,70,90,100],
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    legend:{
+                        display:false,
+                    },
+                    bezierCurve:true,
+                    scales:{
+                        yAxes:[{
+                            ticks:{
+                                fontColor:'#AFAFAF',
+                                fontFamily:'Poppins',
+                                stepSize:10
+                            },
+                            // gridLines:{
+                            //     display:false
+                            // }
+                        }],
+                        xAxes:[{
+                            ticks:{
+                                fontStyle:'bold',
+                                fontColor:'#AFAFAF',
+                                fontFamily:'Poppins',
+                            },
+                            gridLines:{
+                                display:false
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
