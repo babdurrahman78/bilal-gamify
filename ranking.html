@@ -6,23 +6,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
   
-    <title>Dashboard</title>
-  
+    <title>Ranking</title>
+    
     <!-- Custom fonts for this template-->
     <link href="sb-admin-2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  
+    
     <!-- Custom styles for this template-->
     <link href="sb-admin-2/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;1,900&display=swap" rel="stylesheet">
+    
     <link href="assets/style/style.css" rel="stylesheet">
-    <link href="assets/style/dashboard.css" rel="stylesheet">
-    <script src="node_modules/chart.js/dist/Chart.js"></script>
+
+    <!-- Custom styles for this page -->
+    <link href="sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="assets/style/ranking.css" rel="stylesheet" >
+    
   </head>
   <body>
     <div id="wrapper">
         <!-- Sidebar -->
         <ul class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
-
+          
           <!-- Sidebar - Brand -->
           <div class="sidebar-head d-flex align-items-center justify-content-center mt-2 mb-4">
             <a class="sidebar-brand" href="index.html">
@@ -36,7 +40,7 @@
             <!-- end of sidebar Toggler -->
           </div>
 
-          <!-- Avatar   -->
+          
           <div class="avatar">
             <div class="avatar-picture mb-4 mx-auto">
               <img src="assets/avatar.png" alt="">
@@ -46,8 +50,7 @@
               <p class="email">ilhamfrima@gmail.com</p>
             </div>  
           </div>
-          <!-- End of Avatar -->
-
+          
           <!-- Nav Item - Dashboard -->
           <div id="sidebarToggle" class="sidebarToggleBottom mx-auto my-2 p-2 disappear"><img src="assets/right.png" alt="arrow-left"></div>
 
@@ -109,7 +112,7 @@
 
         <!-- Content -->
         <div class="content d-flex flex-column">
-          <ul class="nav justify-content-end mb-3 pr-5">
+          <ul class="nav justify-content-end my-3 pr-5">
             <li class="nav-item my-2 mx-2">
               <p class="date pt-3">Senin, 24 Agustus 2020</p>
             </li>
@@ -124,165 +127,62 @@
               </a>
             </li>
           </ul>
-
           <!-- Main Content -->
-          <div class="dashboard ml-sm-5 mt-4 mc">
-            <h2 class="title font-weight-bold mb-5">Dashboard</h2>
-            <div class="row">
-              <div class="col-sm-9">
-                <div class="greeting d-flex mb-5 pl-5 pr-5 py-4 justify-content-between">
-                  <div class="text">
-                    <h4 class="text-top">
-                      Selamat datang, Ilham Frima
-                    </h4>
-                    <p class="text-bottom">
-                      Persiapkan dirimu dan kerjakan Try out online untuk mengukur kemampuanmu
-                    </p>
-                  </div>
-                  <div class="image">
-                    <img src="assets/hero.png" alt="">
-                  </div>
-                </div>
-                
-                <div class="results">
-                  <p class="title">Lastest Result :</p>
-                  <div class="buttons d-inline-flex mb-4">
-                    <div id="pu" class="btn mr-3">
-                      PU
-                    </div>
-                    <div id="pk" class="btn mr-3">
-                      PK
-                    </div>
-                    <div id="pbdm" class="btn mr-3">
-                      PDBM
-                    </div>
-                    <div id="pdpu" class="btn mr-3">
-                      PDPU
-                    </div>
-                  </div>
-                  <div class="chart mb-5">
-                    <h4 class="chartTitle mb-4">
-                      Penalaran Umum
-                    </h4>
-                    <h4 class="chartTitle mb-4 disappear">
-                      PK
-                    </h4>
-                    <h4 class="chartTitle mb-4 disappear">
-                      PBDM
-                    </h4>
-                    <h4 class="chartTitle mb-4 disappear">
-                      PDPU
-                    </h4>
-                    <canvas id="myChart"></canvas>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="col-sm-3">
-                <div class="strength p-3">
-                  <p class="strength-title">
-                    Your Strength
-                  </p>
-                  <div class="strength-chart">
-                    <canvas id="myStrength"></canvas>
-                  </div>
-                  <div class="note d-flex">
-                    <div class="note-pic mt-1 mr-2"></div>
-                    <p class="mt-1">Rata-rata</p>
-                  </div>
-                </div>
-                <div class="tips mt-5 px-4 py-2">
-                  <p class="tips-title">
-                    Tips :
-                  </p>
-                  <p class="tips-content">
-                    Atur strategi untuk meningkatkan kemampuan mu dan terus lanjut ke level berikutnya!
-                  </p>
-                </div>
+          <div class="card shadow ml-sm-5 mr-5 mb-4 mc" >
+            <div class="card-header py-3 px-4" >
+              <h6 class="m-0 font-weight-bold">RANGKING TO 1 UTBK GAMIFYTHINK SE-INDONESIA</h6>
+            </div>
+            <div class="card-body px-4">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Nama</th>
+                      <th>Jurusan</th>
+                      <th>Universitas</th>
+                      <th>Provinsi</th>
+                      <th>Asal Kota</th>
+                      <th>Score</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Ilham Frima</td>
+                      <td>Ilmu Hitam</td>
+                      <td>Hogwarts</td>
+                      <td>Jawa Barat</td>
+                      <td>Bekasi</td>
+                      <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ilham Frima</td>
+                        <td>Ilmu Hitam</td>
+                        <td>Hogwarts</td>
+                        <td>Jawa Barat</td>
+                        <td>Bekasi</td>
+                        <td>50</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Ilham Frima</td>
+                        <td>Ilmu Hitam</td>
+                        <td>Hogwarts</td>
+                        <td>Jawa Barat</td>
+                        <td>Bekasi</td>
+                        <td>70</td>
+                      </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            
-            
           </div>
+          <!-- End of Main Content -->
         </div>
         <!-- End of Content -->
       </div>
-      <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var str = document.getElementById('myStrength').getContext('2d');
-        var chartLine = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'line',
-            // The data for our dataset
-            data: {
-                labels: ['','TO1', 'TO2', 'TO3', 'TO4'],
-                datasets: [{
-                    label: 'My First dataset',
-                    fill : false,
-                    borderColor: '#FE6534',
-                    data: [null, 60, 70, 80,70,90,100],
-                }]
-            },
-
-            // Configuration options go here
-            options: {
-                legend:{
-                    display:false,
-                },
-                bezierCurve:true,
-                scales:{
-                    yAxes:[{
-                        ticks:{
-                            fontColor:'#AFAFAF',
-                            fontFamily:'Poppins',
-                            stepSize:10
-                        },
-                        // gridLines:{
-                        //     display:false
-                        // }
-                    }],
-                    xAxes:[{
-                        ticks:{
-                            fontColor:'#AFAFAF',
-                            fontFamily:'Poppins',
-                        },
-                        gridLines:{
-                            display:false
-                        }
-                    }]
-                }
-            }
-        });
-        var chartRadar = new Chart(str, {
-            // The type of chart we want to create
-            type: 'radar',
-            // The data for our dataset
-            data: {
-                labels: ['PDPU', 'PK', 'PDBM', 'PU'],
-                datasets: [{
-                    label: 'My First dataset',
-                    fill : true,
-                    backgroundColor :'rgba(254, 101, 52, 0.3)',
-                    borderColor: '#FE6534',
-                    data: [60,80,70,70],
-                }]
-            },
-
-            options:{
-              legend:{
-                    display:false,
-                },
-              maintainAspectRatio: false,
-              scale:{
-                    ticks:{
-                      display:false
-                    },
-                    fontFamily:'Poppins',
-                }
-            }
-        });
-    </script>
-    
       <!-- Bootstrap core JavaScript-->
     <script src="sb-admin-2/vendor/jquery/jquery.min.js"></script>
     <script src="sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -294,10 +194,11 @@
     <script src="sb-admin-2/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="sb-admin-2/vendor/chart.js/Chart.min.js"></script>
+
+    <script src="sb-admin-2/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="sb-admin-2/js/demo/chart-area-demo.js"></script>
-    <script src="sb-admin-2/js/demo/chart-pie-demo.js"></script>
+    <script src="sb-admin-2/js/demo/datatables-demo.js"></script>
   </body>
 </html>

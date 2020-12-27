@@ -12,7 +12,6 @@ li{
     list-style: none;
 }
 .sidebar{
-    /* padding: 0px 35px; */
     background-color: #1d4f94 !important;
     font-weight: 500;
     position: relative;
@@ -102,6 +101,7 @@ li{
     font-size: 18px;
     font-weight: 500;
 }
+
 .content .main-content .profile .avatar-data p{
     font-size: 20px;
 }
@@ -112,6 +112,7 @@ li{
     margin-top: 5px;
     color: rgba(0, 0, 0, 0.6);
 }
+
 .content .main-content .profile .data .label{
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
@@ -123,6 +124,10 @@ li{
 
 .move-right{
     margin-left: 100px;
+}
+
+#sidebarToggle{
+    cursor: pointer;
 }
 
 .sidebarToggleTop{

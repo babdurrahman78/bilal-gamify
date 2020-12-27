@@ -6,8 +6,10 @@
     $("body").toggleClass("sidebar-toggled");
     $(".sidebar").toggleClass("toggled");
     $(".sidebar .avatar-data").toggleClass("disappear")
-    $(".main-content").removeClass("ml-sm-5")
-    $(".main-content").toggleClass("move-right")
+    
+    $(".mc").removeClass("ml-sm-5")
+    $(".mc").toggleClass("move-right")
+    // mc = main-content
     $(".sidebar-brand-text").toggleClass("disappear")
     $(".sidebar-brand-text-small").removeClass("disappear")
     $(".avatar-picture").removeClass("mb-4")
@@ -15,8 +17,8 @@
     $(".sidebarToggleTop").toggleClass("disappear")
     $(".sidebarToggleBottom").removeClass("disappear")
     if (!$(".sidebar").hasClass("toggled")){
-      $(".main-content").toggleClass("ml-sm-5")
-      $(".main-content").removeClass("move-right")
+      $(".mc").toggleClass("ml-sm-5")
+      $(".mc").removeClass("move-right")
       $(".sidebar-brand-text-small").toggleClass("disappear")
       $(".avatar-picture").toggleClass("mb-4")
       $(".sidebarToggleBottom").addClass("disappear")
