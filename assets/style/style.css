@@ -51,9 +51,7 @@ li{
     margin : 3px 0px;
     padding-left: 0px;
 }
-.sidebar .nav-item span{
-   
-}
+
 .sidebar .nav-item .nav-link, .sidebar .nav-item .nav-link i{
     color: rgba(32, 32, 32, 0.5); 
 }
@@ -62,9 +60,19 @@ li{
     background: rgba(60, 117, 160, 0.08);
     width: 100%;
 }
-.nav .nav-item{
+.content .nav .nav-item{
     padding: 0px !important;
 }
+
+.content .nav .input-group .input-group-append .btn{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.content .nav .input-group .input-group-append .btn:hover{
+    color: #202020;
+    background-color:#f8f9fc  ;
+}
+
 .content .nav .nav-item .date{
     color: #4F4F4F;
     font-size: 16px;
@@ -81,7 +89,7 @@ li{
     font-size: 14px;
     font-weight: 500 ;
 }
-.content .nav  .btn:hover{
+.content .nav  .pilih-to .btn:hover{
     color: #2F80ED;
     font-size: 14px;
     font-weight: 500 ;
