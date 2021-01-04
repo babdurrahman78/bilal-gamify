@@ -61,8 +61,8 @@
             </div>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item active">
+            <a class="nav-link active" href="#">
               <i class="fas fa-fw fa-user"></i>
               <span>Profil</span>
             </a>
@@ -109,18 +109,33 @@
         <!-- Topbar -->
         <div class="content d-flex flex-column">
           <ul class="nav justify-content-between my-3 pr-5">
+            
+            <!-- Topbar Search -->
+
             <div class="ml-sm-5 mt-3">
-              <form class="d-none d-sm-inline-block form-inline mw-100 navbar-search">
+              <form class="d-none d-sm-inline-block form-inline mw-100 navbar-search " style="z-index: 99; position: absolute; ">
                 <div class="input-group">
-                  <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                  <input type="text" id="mySearch" class="form-control bg-white border-0 small text-dark" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="search()">
                   <div class="input-group-append">
-                    <button class="btn btn-light" type="button">
+                    <button class="btn"  type="button">
                       <i class="fas fa-search fa-sm"></i>
                     </button>
                   </div>
                 </div>
+                <div class="list rounded-bottom" >
+                  <ul class="border-top" id="myMenu">
+                    <li ><a href="#">Daftar Try Out Gratis</a></li>
+                    <li ><a href="#">Daftar Try Out Murah</a></li>
+                    <li ><a href="#">Daftar Try Out Mahal</a></li>
+                    <li ><a href="#">Daftar Try Out STAN</a></li>
+                    <li ><a href="#">Daftar Try Out STIS</a></li>
+                  </ul>
+                </div>
               </form>
             </div>
+
+            <!-- End of Topbar search -->
+
             <div class="d-flex">
               <li class="nav-item my-2 mx-2">
                 <p class="date pt-3">Senin, 24 Agustus 2020</p>
@@ -183,6 +198,23 @@
         <!-- End of Content -->
       </div>
       <!-- Bootstrap core JavaScript-->
+    <script>
+      function search() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("mySearch");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myMenu");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().includes(filter) && filter !== "") {
+              li[i].style.display = "block";
+            } else {
+              li[i].style.display = "";
+            }
+          }
+        }
+    </script>
     <script src="sb-admin-2/vendor/jquery/jquery.min.js"></script>
     <script src="sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
