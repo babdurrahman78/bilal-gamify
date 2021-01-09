@@ -11,6 +11,12 @@ li{
     margin: 0;
     list-style: none;
 }
+.navbar-nav{
+    position: fixed !important;
+    left: 0;
+    top: 0;
+}
+
 .sidebar{
     background-color: #1d4f94 !important;
     font-weight: 500;
@@ -173,4 +179,11 @@ li{
 .sidebarToggleBottom{
     background-color: rgba(19, 47, 85, 0.5);
     border-radius: 5px;
+}
+
+.content{
+    width: 83.4%;
+    position: relative;
+    left: 224px;
+    height: 1000px;
 }
